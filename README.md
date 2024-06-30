@@ -22,17 +22,18 @@ export default {
     project: ['./tsconfig.json', './tsconfig.node.json'],
     tsconfigRootDir: __dirname,
   },
-}
+};
 ```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
+![LintingFormatting](https://res.cloudinary.com/practicaldev/image/fetch/s--tNpmYEAU--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ln75diaqkaxox9n1yfpb.png)
 
 - Run npm create vite@latest
 - Run npm i. Also install rimraf as dev dependency.
-- Setup Prettier https://prettier.io/docs/en/install. 
+- Setup Prettier https://prettier.io/docs/en/install.
 - Run npm install --save-dev --save-exact prettier
 - Create prettierrc & prettierignore files
 
@@ -44,6 +45,8 @@ export default {
 - In parserOptions add "project": "./tsconfig.json". In rules add 'prettier/prettier': 'warn'
 - In include of tsconfig add ".eslintrc.cjs"
 
-- Add airbnb styleguide 
+- Add airbnb styleguide
 - Run npx install-peerdeps --dev eslint-config-airbnb
 - Run npm install eslint-config-airbnb-typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev
+- Run npm i -D husky lint-staged
+- Run npx husky-init
