@@ -6,6 +6,14 @@ import './App.css';
 function App() {
   const [count, setCount] = useState(0);
 
+  function add_nums(x, y) {
+    return x + y;
+  }
+
+  const score1 = 10;
+  const score2 = 20;
+  const totalScore = new String(score1 + score2);
+
   useEffect(() => {
     console.log('count changed:', count);
   }, [count]);

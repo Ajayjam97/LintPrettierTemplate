@@ -32,11 +32,18 @@ export default {
 
 - Run npm create vite@latest
 - Run npm i. Also install rimraf as dev dependency.
-- Setup Prettier https://prettier.io/docs/en/install. Run npm install --save-dev --save-exact prettier
+- Setup Prettier https://prettier.io/docs/en/install. 
+- Run npm install --save-dev --save-exact prettier
 - Create prettierrc & prettierignore files
 
 - Integrate linter with Prettier https://prettier.io/docs/en/integrating-with-linters
-- Run npm i -D eslint-config-prettier eslint-plugin-prettier.
-eslint-config-prettier disables rules which will conflict with prettier
-eslint-plugin-prettier so that all prettier rules work in conjuction with lint rules
-- Add "prettier" in extends of eslintrc.cjs
+- eslint-config-prettier disables rules which will conflict with prettier
+  eslint-plugin-prettier so that all prettier rules work in conjuction with lint rules
+- Run npm i -D eslint-config-prettier
+- If you run eslint --fix and prettier --write as separate steps, use "plugin:prettier/recommended" in extends of eslintrc.cjs
+- In parserOptions add "project": "./tsconfig.json". In rules add 'prettier/prettier': 'warn'
+- In include of tsconfig add ".eslintrc.cjs"
+
+- Add airbnb styleguide 
+- Run npx install-peerdeps --dev eslint-config-airbnb
+- Run npm install eslint-config-airbnb-typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev
