@@ -50,3 +50,5 @@ export default {
 - Run npm install eslint-config-airbnb-typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev
 - Run npm i -D husky lint-staged
 - Run npx husky-init
+- Add lint-staged to package.json
+- Add npm lint-staged to .husky/pre-commit

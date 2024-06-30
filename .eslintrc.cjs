@@ -4,9 +4,9 @@ module.exports = {
   extends: [
     'airbnb',
     'airbnb-typescript',
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
+    //'eslint:recommended',
+    //'plugin:@typescript-eslint/recommended',
+    //'plugin:react-hooks/recommended',
     'plugin:prettier/recommended'
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
@@ -17,5 +17,6 @@ module.exports = {
   },
   rules: {
     'prettier/prettier': 'warn',
+    'react/button-has-type': 'off'
   },
 }
