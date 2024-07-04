@@ -17,6 +17,15 @@ module.exports = {
   },
   rules: {
     'prettier/prettier': 'warn',
-    'react/button-has-type': 'off'
+    'react/button-has-type': 'off',
+    "react/react-in-jsx-scope": "off"
   },
+  "overrides": [
+    {
+      "files": ["**/setupTests.ts"],
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
+      }
+    }
+  ]
 }

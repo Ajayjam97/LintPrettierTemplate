@@ -52,3 +52,10 @@ export default {
 - Run npx husky-init
 - Add lint-staged to package.json
 - Add npm lint-staged to .husky/pre-commit
+
+- Run npm i -D vitest
+- Run npm i -D jsdom @testing-library/react @testing-library/jest-dom
+- Add /// <reference types="vitest" /> /// <reference types="vite/client" /> to vite config
+- Also add test property to vite config
+- Add setupTests.ts
+- Add "types": ["vitest/globals", "@testing-library/jest-dom"] in tsconfig.app.json
